@@ -9,6 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.component.button.Button;
 
+// Ostatnim etapem jest przygotowanie GUI, które umożliwi zapis i odczyt danych obrazków.
+// Tu jest pełna dobrowolność. Ja moja propozycja wygląda następująco:
+
 @Route("upload")        // musi byc to jest nazocone przez specyfikacje springa
 public class UploadGui extends VerticalLayout {
 

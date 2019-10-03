@@ -11,6 +11,10 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+// Aby użytkownika można było autoryzować z wykorzystaniem Spring Security musimy
+// zaimplementować interfejs UserDetailsService. Następnie w klasie implementującej przekazujemy
+// użytkownika z repozytorium z wykorzystaniem metody loadUserByUsername
+
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 

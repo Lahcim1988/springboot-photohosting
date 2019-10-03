@@ -12,6 +12,10 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 
+// Po dokonanej rejestracji w serwisie dostajemy Cloud name, API Key i API Secret.
+// Dane te umieszczamy w pliku application.properties, natomiast w nowej klasie podstaw te wartości i utwórz
+// metodę, która na podstawie ścieżki umieści plik na serwerze
+
 @Service
 public class ImageUpader {
 

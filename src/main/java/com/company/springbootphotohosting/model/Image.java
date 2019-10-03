@@ -5,6 +5,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+// Opcjonalnie możesz stworzyć Obiekt Image i ImageRepo (tak jak ja to zrobiłem),
+// które umożliwią zapis i odczyt obrazka z bazy danych.
+
 @Entity
 public class Image {
 

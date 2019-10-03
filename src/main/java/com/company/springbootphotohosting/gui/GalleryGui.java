@@ -12,6 +12,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
+//Ostatnim etapem jest przygotowanie GUI, które umożliwi zapis i odczyt danych obrazków.
+// Tu jest pełna dobrowolność. Ja moja propozycja wygląda następująco:
+
 @Route("gallery")
 public class GalleryGui extends VerticalLayout {
 

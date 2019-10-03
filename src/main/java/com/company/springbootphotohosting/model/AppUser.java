@@ -11,6 +11,9 @@ import javax.persistence.Id;
 import java.util.Collection;
 import java.util.Collections;
 
+// Musimy utworzyć model dla użytkownika. Aby był on zgodny z interfejsem wymaganym przez
+// Spring Security do obsługi autoryzacji to musi on dodatkowo implementować UserDetails.
+
 @Entity
 public class AppUser implements UserDetails {
 

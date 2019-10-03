@@ -18,6 +18,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import java.util.Collection;
 import java.util.Collections;
 
+// Kluczową funkcjonalnością w projekcie jest autoryzacja. Dlatego trzeba stworzyć klasę pozwalającą na zarządzanie
+// prawami użytkowników. Utwórz klasę WebSeciurtiyConfig, która będzie dziedziczyła po WebSecurityConfigurerAdapter.
+
 @Configuration
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -30,6 +33,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         this.appUserRepo = appUserRepo;
     }
 
+    // Do pełni autoryzacji wystawczy podpiąć implementacje do klasy WebSeciurtiyConfig:
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
@@ -37,6 +42,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //                new User("Mike", passwordEncoder().encode("Mike123"), Collections.singleton(new SimpleGrantedAuthority("user"))));      // definiuje nowego uzytkownika
         auth.userDetailsService(userDetailsService);        // musze przekazac ze klasa odpowiedzialna za laczenie sie z baza danych to wlasnie jest userDetailsService
     }
+
+//    Wewnątrz niej trzeba zaimplementować metodę configure(HttpSecurity http). Odpowiada ona za
+//    autoryzację. Należy nadać użytkownikowi USER prawa do endpointu /gallery, oraz użtownikowi
+//    ADMIN dostęp do endpointu /upload. W późniejszym etapie endpointy te będą udostępniały usługi
+//    kolejno przeglądania zdjęć i umieszczania zdjęć na serwerze.
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -50,7 +60,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .formLogin().permitAll()
                 .and()
-                .csrf().disable();
+                .csrf().disable();      // Dodatkowo w kodzie został wyłączony CSRF – po to, aby było możliwe wykorzystania biblioteki Vaadin.
  /*               .headers().frameOptions().disable()
                 .and()
                 .headers().disable();*/
