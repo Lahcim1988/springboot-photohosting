@@ -1,19 +1,17 @@
 # springboot-photohosting
 
-1. Projekt
-
-Hosting zdjęć. 
+## Photo Hosting 
 
 Aplikacja posiada dwa rodzaje użytkowników, których przechowuje w bazie danych – animistrator, oraz user. 
 Po zalogowaniu administrator ma możliwość dodawanie zdjęć. 
 Zalogowany użytkownik przegląda dostępne galerie. Użytkownik niezalogowany ma dostępną formatkę logowania.
 
-2. Przygotowanie
+The application has two types of users, stored in a database - admin as user. After log on the administrator can add photos. The logged user can browse available galleries. The unlogged user has the login form available.
 
-Projekt został stworzony z wykorzystaniem Spring Boot. Zależności dodane do projektu:
+The project was created with Spring Boot. Dependencies added to the project:
 
-- Spring Web Starter – umożliwa towrzenie aplikacji webowej
-- Vaadin – biblioteka do tworzenia GUI
-- Spring Security – zestaw narzędzi umożliwiających na tworzenie zabezpieczeń aplikacji przed niepowołanym dostępem
-- Spring Data JPA – zestaw narzędzi pozwalających na komunikowanie się z relacyjną bazą danych
-- MySQL Driver – sterownik umożliwiający na łączenie się z bazą danych MySQL
+* Spring Web Starter - web application
+* Vaadin - GUI library
+* Spring Security - a set of tools enabling the creation of applications protecting against unauthorized configuration
+* Spring Data JPA - a set of tools that allow to communicate with the relational db
+* MySQL Driver - a driver that allows connecting to MySQL db
