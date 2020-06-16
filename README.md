@@ -1,10 +1,4 @@
-# springboot-photohosting
-
 ## Photo Hosting 
-
-Aplikacja posiada dwa rodzaje użytkowników, których przechowuje w bazie danych – animistrator, oraz user. 
-Po zalogowaniu administrator ma możliwość dodawanie zdjęć. 
-Zalogowany użytkownik przegląda dostępne galerie. Użytkownik niezalogowany ma dostępną formatkę logowania.
 
 The application has two types of users, stored in a database - admin as user. After log on the administrator can add photos. The logged user can browse available galleries. The unlogged user has the login form available.
 
